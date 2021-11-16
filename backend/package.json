@@ -11,6 +11,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@christianya/ccest-core-services": "^0.0.1",
         "apollo-server": "^3.5.0",
         "apollo-server-express": "^3.5.0",
         "babel-node": "0.0.1-security",
