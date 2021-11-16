@@ -1,0 +1,12 @@
+backend/node_modules
+backend/.idea/**/*.*
+backend/.vs
+backend/.vscode
+backend/__tests__/coverage/**/*.*
+**/**/node_modules/**/*.*
+frontend/ccest/node_modules
+frontend/ccest/.idea/**/*.*
+frontend/ccest/.vs
+frontend/ccest/.vscode
+frontend/ccest/__tests__/coverage/**/*.*
+**/**/node_modules/**/*.*
