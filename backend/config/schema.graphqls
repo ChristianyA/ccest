@@ -1,0 +1,144 @@
+type Error{
+    code:String
+    message:String
+    stackTrace:String
+
+}
+type User{
+    id:ID,
+    username: String,
+    password: String,
+    emailAddress: String,
+    firstName: String,
+    lastName: String,
+    phone: String,
+    address: String,
+    city: String,
+    zipCode: String,
+    country: String,
+    createdAt: String,
+    userRoles: [UserRole]
+    isActive: Boolean,
+}
+type UserRole{
+    id:ID,
+    userId: ID,
+    roleId: ID,
+    name: String,
+    createdAt: String
+}
+input UserRoleInput{
+    userId: ID,
+    roleId: ID,
+    name: String
+}
+type LoginResult{
+    statusCode:Int!
+    ,errors:[Error]
+    ,data:User
+
+}
+type DatabaseConfiguration{
+
+    """No description Captured"""
+    password:String,
+
+    """No description Captured"""
+    username:String,
+
+    """No description Captured"""
+    port:String,
+
+    """No description Captured"""
+    bucketName:String,
+
+    """No description Captured"""
+    clusterUri:String,
+
+    """No description Captured"""
+    uri:String,
+
+}
+type InstallConfiguration{
+
+    """No description Captured"""
+    user:User,
+
+    """No description Captured"""
+    id:ID,
+
+    """No description Captured"""
+    databaseConfiguration:DatabaseConfiguration,
+}
+type InstallCcestResult{
+    statusCode:Int!
+    ,errors:[Error]
+    ,data:InstallConfiguration
+
+}
+input InstallConfigurationInput{
+
+
+    """No description Captured"""
+    user:UserInput,
+
+    """No description Captured"""
+    id:ID,
+
+    """No description Captured"""
+    databaseConfiguration:DatabaseConfigurationInput,
+
+
+}
+input InstallCcest{
+
+    """No description Captured"""
+    installConfiguration:InstallConfigurationInput,
+
+}
+input DatabaseConfigurationInput{
+
+    """No description Captured"""
+    password:String,
+
+    """No description Captured"""
+    username:String,
+
+    """No description Captured"""
+    port:String,
+
+    """No description Captured"""
+    bucketName:String,
+
+    """No description Captured"""
+    clusterUri:String,
+
+    """No description Captured"""
+    uri:String,
+
+}
+input UserInput{
+    id:ID,
+    username: String,
+    password: String,
+    state: Boolean,
+    firstName: String,
+    lastName: String,
+    phone: String,
+    address: String,
+}
+input InstallCcestInput{
+
+    """No description Captured"""
+    installConfiguration:InstallConfigurationInput,
+
+}
+type Query{
+    requestUser(id:ID):User
+    requestUsers:[User]
+}
+
+type Mutation {
+    login(parameters:UserInput):LoginResult,
+    install(parameters:InstallCcestInput):InstallCcestResult,
+}

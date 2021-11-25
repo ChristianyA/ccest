@@ -1,0 +1,10 @@
+{
+  "ccestConfig": {
+    "uri": "http://localhost",
+    "clusterUri": "localhost",
+    "bucketName":"ccest-dev",
+    "username":"ccest-admin",
+    "password":"Welcome#1",
+    "port": "4000"
+  }
+}

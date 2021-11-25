@@ -11,7 +11,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@christianya/ccest-core-services": "^0.0.1",
+        "@christianya/ccest-core-services": "^0.0.3",
         "apollo-server": "^3.5.0",
         "apollo-server-express": "^3.5.0",
         "babel-node": "0.0.1-security",
@@ -34,6 +34,7 @@
         "path": "^0.12.7",
         "prettier": "^2.4.1",
         "uuid": "^8.3.2",
+        "uuidv4": "^6.2.12",
         "webpack": "^5.64.1"
     }
 }
